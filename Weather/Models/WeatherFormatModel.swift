@@ -18,6 +18,10 @@ struct WeatherFormat {
     let maxTemperature: String
     let humidity: String
     let wind: String
+    let sunrise: Date
+    let sunset: Date
     
-    static let empty: WeatherFormat = WeatherFormat(city: "Sin ciudad", weather: "Sin clima", description: "Sin descripción", iconUrl: nil, currentTemp: "0°C", feelsLike: "0°C", minTemperature: "0°C", maxTemperature: "0°C", humidity: "0%", wind: "0")
+    static let empty: WeatherFormat = WeatherFormat(city: "Sin datos", weather: "Sin clima", description: "Sin descripción", iconUrl: nil, currentTemp: "0°C", feelsLike: "0°C", minTemperature: "0°C", maxTemperature: "0°C", humidity: "0%", wind: "0", sunrise: .now, sunset: .now)
 }
+
+

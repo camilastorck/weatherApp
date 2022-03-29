@@ -12,12 +12,16 @@ struct WeatherResponseModel: Codable {
     let weather: [Weather]
     let temperature: Temperature
     let wind: Wind
+    let sun: Sun
+    let timezone: Double
     
     enum CodingKeys: String, CodingKey {
         case city = "name"
         case weather
         case temperature = "main"
         case wind
+        case sun = "sys"
+        case timezone
     }
 }
 
@@ -51,4 +55,9 @@ struct Temperature: Codable {
 
 struct Wind: Codable {
     let speed: Double
+}
+
+struct Sun: Codable {
+    let sunrise: Date
+    let sunset: Date
 }

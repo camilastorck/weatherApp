@@ -11,10 +11,11 @@ final class WeatherViewModel: ObservableObject {
     
     @Published var weather: WeatherFormat = .empty
     private let mapper: Mapper = Mapper()
+    private let key = "e138bdccfe8ee4cddfda71ab4fe1c722"
     
-    func getWeather(lat: Double, lon: Double) async {
+    func getWeather(place: Place) async {
         
-        guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?lat=\(lat)&lon=\(lon)&appid=e138bdccfe8ee4cddfda71ab4fe1c722&units=metric&lang=es") else { return }
+        guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?lat=\(place.lat)&lon=\(place.lon)&appid=\(key)&units=metric&lang=es") else { return }
         
         do {
             async let (data, _) = try await URLSession.shared.data(from: url)
@@ -27,4 +28,5 @@ final class WeatherViewModel: ObservableObject {
             print(error.localizedDescription)
         }
     }
+    
 }

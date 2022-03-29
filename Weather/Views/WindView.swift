@@ -15,28 +15,6 @@ struct WindView: View {
     
     var body: some View {
         VStack(spacing: -10) {
-            HStack {
-                Image(systemName: "cloud")
-                    .resizable()
-                    .scaledToFit()
-                    .foregroundColor(blueish)
-                    .frame(width: UIScreen.main.bounds.width * 0.05)
-
-                Text("Calidad del aire")
-                    .font(.system(size: 16))
-                Spacer()
-                Button {
-                    
-                } label: {
-                    Image(systemName: "arrow.clockwise")
-                        .foregroundColor(.black)
-                        .padding(7)
-                        .cornerRadius(50)
-                    // Poner sombra
-                }
-            }
-            .padding(.horizontal, 12)
-            .padding(.top, 5)
             HStack(alignment: .center, spacing: 0) {
                 Spacer()
                 Image(systemName: "cloud")
@@ -61,7 +39,7 @@ struct WindView: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
-        .frame(width: UIScreen.main.bounds.width * 0.8, height: UIScreen.main.bounds.height * 0.15, alignment: .center)
+        .frame(width: UIScreen.main.bounds.width * 0.7, height: UIScreen.main.bounds.height * 0.12, alignment: .center)
         .background(Color.white)
         .cornerRadius(30)
     }

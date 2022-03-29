@@ -14,6 +14,9 @@ struct Mapper {
         guard let weather = model.weather.first else { return .empty }
         let temperature = model.temperature
         let wind = model.wind
+        //let sun = model.sun
+        let sunriseWithTimezone = model.sun.sunrise.addingTimeInterval(model.timezone - Double(TimeZone.current.secondsFromGMT()))
+        let sunsetWithTimezone = model.sun.sunset.addingTimeInterval(model.timezone - Double(TimeZone.current.secondsFromGMT()))
         
         return WeatherFormat(city: model.city,
                              weather: weather.main,
@@ -24,6 +27,8 @@ struct Mapper {
                              minTemperature: "\(Int(temperature.minTemperature))°C",
                              maxTemperature: "\(Int(temperature.maxTemperature))°C",
                              humidity: "\(Int(temperature.humidity))%",
-                             wind: "\(Int(wind.speed)) m/s.")
+                             wind: "\(Int(wind.speed)) m/s.",
+                             sunrise: sunriseWithTimezone,
+                             sunset: sunsetWithTimezone)
     }
 }

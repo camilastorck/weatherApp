@@ -65,8 +65,6 @@ struct TemperatureView: View {
 
 struct TemperatureView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
-            TemperatureView(vm: WeatherViewModel())
-        }
+        TemperatureView(vm: WeatherViewModel())
     }
 }

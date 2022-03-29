@@ -20,6 +20,8 @@
 		18CBFE3B27EFF393009E1E1F /* WindView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CBFE3A27EFF393009E1E1F /* WindView.swift */; };
 		18CBFE3D27EFF498009E1E1F /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CBFE3C27EFF498009E1E1F /* TitleView.swift */; };
 		18CBFE3F27EFFA24009E1E1F /* SunsetSunriseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CBFE3E27EFFA24009E1E1F /* SunsetSunriseView.swift */; };
+		18EDEB0327F2A07D00D472CF /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EDEB0227F2A07D00D472CF /* PlaceModel.swift */; };
+		18EDEB0527F2A2B100D472CF /* PlaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EDEB0427F2A2B100D472CF /* PlaceViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		18CBFE3A27EFF393009E1E1F /* WindView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindView.swift; sourceTree = "<group>"; };
 		18CBFE3C27EFF498009E1E1F /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		18CBFE3E27EFFA24009E1E1F /* SunsetSunriseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunsetSunriseView.swift; sourceTree = "<group>"; };
+		18EDEB0227F2A07D00D472CF /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
+		18EDEB0427F2A2B100D472CF /* PlaceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +120,7 @@
 				18CBFE2F27EFA4C6009E1E1F /* WeatherModel.swift */,
 				18CBFE3427EFDFBC009E1E1F /* WeatherFormatModel.swift */,
 				18CBFE3627EFE634009E1E1F /* Mapper.swift */,
+				18EDEB0227F2A07D00D472CF /* PlaceModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -124,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				18CBFE3227EFA91B009E1E1F /* WeatherViewModel.swift */,
+				18EDEB0427F2A2B100D472CF /* PlaceViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -201,7 +207,9 @@
 			files = (
 				18CBFE1E27EEA8A5009E1E1F /* MainView.swift in Sources */,
 				18CBFE3327EFA91B009E1E1F /* WeatherViewModel.swift in Sources */,
+				18EDEB0327F2A07D00D472CF /* PlaceModel.swift in Sources */,
 				18CBFE3027EFA4C6009E1E1F /* WeatherModel.swift in Sources */,
+				18EDEB0527F2A2B100D472CF /* PlaceViewModel.swift in Sources */,
 				18CBFE3527EFDFBC009E1E1F /* WeatherFormatModel.swift in Sources */,
 				18CBFE3F27EFFA24009E1E1F /* SunsetSunriseView.swift in Sources */,
 				18CBFE3727EFE634009E1E1F /* Mapper.swift in Sources */,

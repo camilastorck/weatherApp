@@ -28,8 +28,6 @@ struct TitleView: View {
 
 struct TitleView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
-            TitleView(vm: WeatherViewModel())
-        }
+        TitleView(vm: WeatherViewModel())
     }
 }
