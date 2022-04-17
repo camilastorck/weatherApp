@@ -55,6 +55,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18759FD5280CC31800563585 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				18CBFE2927EEB61D009E1E1F /* Font */,
+				18CBFE2127EEA8AB009E1E1F /* Preview Content */,
+				18CBFE1F27EEA8AB009E1E1F /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		18CBFE0F27EEA8A5009E1E1F = {
 			isa = PBXGroup;
 			children = (
@@ -75,13 +85,11 @@
 			isa = PBXGroup;
 			children = (
 				18CBFE1B27EEA8A5009E1E1F /* WeatherApp.swift */,
+				18759FD5280CC31800563585 /* Resources */,
 				18CBFE3127EFA909009E1E1F /* ViewModels */,
 				18CBFE2E27EFA4AE009E1E1F /* Models */,
 				18CBFE2D27EFA49C009E1E1F /* Views */,
-				18CBFE2927EEB61D009E1E1F /* Font */,
-				18CBFE1F27EEA8AB009E1E1F /* Assets.xcassets */,
 				18CBFE2C27EEB699009E1E1F /* Info.plist */,
-				18CBFE2127EEA8AB009E1E1F /* Preview Content */,
 			);
 			path = Weather;
 			sourceTree = "<group>";
@@ -346,7 +354,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Weather/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Weather/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 3XV8992957;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -376,7 +384,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Weather/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Weather/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 3XV8992957;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

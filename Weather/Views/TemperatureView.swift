@@ -54,6 +54,7 @@ struct TemperatureView: View {
                 .padding(.top, 15)
             }
         }
+        .padding(.horizontal)
         .frame(width: UIScreen.main.bounds.width * 0.88, height: UIScreen.main.bounds.height * 0.3, alignment: .center)
         .foregroundColor(.white)
         .background(

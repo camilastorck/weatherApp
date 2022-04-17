@@ -17,7 +17,7 @@ struct WindView: View {
         VStack(spacing: -10) {
             HStack(alignment: .center, spacing: 0) {
                 Spacer()
-                Image(systemName: "cloud")
+                Image(systemName: "humidity")
                     .foregroundColor(blueish)
                     .padding(.trailing, 7)
                 VStack {
@@ -26,7 +26,7 @@ struct WindView: View {
                     Text(vm.weather.humidity)
                 }
                 Spacer()
-                Image(systemName: "cloud")
+                Image(systemName: "wind")
                     .foregroundColor(blueish)
                     .padding(.trailing, 7)
                 VStack {

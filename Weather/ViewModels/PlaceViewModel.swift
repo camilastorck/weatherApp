@@ -23,6 +23,7 @@ class PlaceViewModel: ObservableObject {
             
             DispatchQueue.main.async {
                 self.place = dataModel
+                print(dataModel)
             }
             
         } catch {
