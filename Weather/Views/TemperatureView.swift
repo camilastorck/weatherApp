@@ -10,9 +10,8 @@ import SwiftUI
 struct TemperatureView: View {
     
     @StateObject var vm: WeatherViewModel
+    private let palette: Palette = Palette()
     let date = Date().formatted(date: .abbreviated, time: .omitted)
-    let blueish = Color(red: 0.33, green: 0.39, blue: 0.94)
-    let pinkish = Color(red: 0.87, green: 0.38, blue: 0.90)
     
     var body: some View {
         HStack(spacing: 25) {
@@ -58,7 +57,7 @@ struct TemperatureView: View {
         .frame(width: UIScreen.main.bounds.width * 0.88, height: UIScreen.main.bounds.height * 0.3, alignment: .center)
         .foregroundColor(.white)
         .background(
-            LinearGradient(colors: [pinkish, blueish], startPoint: .topLeading, endPoint: .bottomTrailing)
+            LinearGradient(colors: [palette.pinkish, palette.blueish], startPoint: .topLeading, endPoint: .bottomTrailing)
         )
         .cornerRadius(30)
     }

@@ -1,21 +1,20 @@
 //
-//  MainView.swift
+//  ContainerView.swift
 //  Weather
 //
 //  Created by Apple  on 25/03/2022.
 //
 
 import SwiftUI
+import CoreLocationUI
+import CoreLocation
 
-struct MainView: View {
+struct ContainerView: View {
     
     @StateObject var vm = WeatherViewModel()
     @StateObject var vmPlace = PlaceViewModel()
+    private let palette = Palette()
     @State var newCity = ""
-    
-    let back = Color(red: 0.95, green: 0.91, blue: 0.96)
-    let blueish = Color(red: 0.33, green: 0.39, blue: 0.94)
-    let pinkish = Color(red: 0.87, green: 0.38, blue: 0.90)
     
     var body: some View {
         VStack(spacing: 30) {
@@ -31,28 +30,44 @@ struct MainView: View {
                         }
                     }
                 }
-                .foregroundColor(blueish)
+                .foregroundColor(palette.blueish)
             }
             .padding(.horizontal)
             .frame(width: UIScreen.main.bounds.width * 0.6, height: 45, alignment: .center)
             .background(.white)
-            .cornerRadius(20)
+            .cornerRadius(12)
             
             TitleView(vm: vm)
             TemperatureView(vm: vm)
             WindView(vm: vm)
             SunsetSunriseView(vm: vm)
             
+            LocationButton(.currentLocation) {
+                vm.manager.requestLocation()
+                
+                if let currentLocation = vm.userLocation {
+                    Task {
+                        await vm.getWeather(place: currentLocation)
+                    }
+                }
+            }
+            .font(.caption)
+            .foregroundColor(.white)
+            .tint(palette.blueish)
+            .cornerRadius(7)
+
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .ignoresSafeArea()
-        .background(back)
+        .background(palette.back)
         .font(Font.custom("Jost", size: 20))
+    
     }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
+        ContainerView()
     }
 }

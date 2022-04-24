@@ -10,9 +10,7 @@ import SwiftUI
 struct SunsetSunriseView: View {
     
     @StateObject var vm: WeatherViewModel
-    let blueish = Color(red: 0.33, green: 0.39, blue: 0.94)
-    let pinkish = Color(red: 0.87, green: 0.38, blue: 0.90)
-    let gray = Color(red: 0.88, green: 0.88, blue: 0.88)
+    private let palette: Palette = Palette()
     
     var body: some View {
         VStack(spacing: -10) {
@@ -29,7 +27,7 @@ struct SunsetSunriseView: View {
                     .scaledToFit()
                     .frame(width: UIScreen.main.bounds.width * 0.15, alignment: .center)
                     .padding(.horizontal)
-                    .foregroundColor(gray)
+                    .foregroundColor(palette.gray)
                 VStack {
                     Text(vm.weather.sunset, style: .time)
                         .font(.system(size: 13))

@@ -10,15 +10,14 @@ import SwiftUI
 struct WindView: View {
     
     @StateObject var vm: WeatherViewModel
-    let blueish = Color(red: 0.33, green: 0.39, blue: 0.94)
-    let pinkish = Color(red: 0.87, green: 0.38, blue: 0.90)
+    private let palette: Palette = Palette()
     
     var body: some View {
         VStack(spacing: -10) {
             HStack(alignment: .center, spacing: 0) {
                 Spacer()
                 Image(systemName: "humidity")
-                    .foregroundColor(blueish)
+                    .foregroundColor(palette.blueish)
                     .padding(.trailing, 7)
                 VStack {
                     Text("Humedad")
@@ -27,7 +26,7 @@ struct WindView: View {
                 }
                 Spacer()
                 Image(systemName: "wind")
-                    .foregroundColor(blueish)
+                    .foregroundColor(palette.blueish)
                     .padding(.trailing, 7)
                 VStack {
                     Text("Viento")

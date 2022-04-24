@@ -15,7 +15,7 @@ class PlaceViewModel: ObservableObject {
 
     func getPlace(city: String) async {
         
-        guard let url = URL(string: "https://api.openweathermap.org/geo/1.0/direct?q=\(city)&limit=1&appid=\(key)") else { return }
+        guard let url = URL(string: "https://api.openweathermap.org/geo/1.0/direct?q=\(city)&limit=4&appid=\(key)") else { return }
         
         do {
             async let (data, _) = try await URLSession.shared.data(from: url)

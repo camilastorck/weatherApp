@@ -10,13 +10,13 @@ import SwiftUI
 struct TitleView: View {
     
     @StateObject var vm: WeatherViewModel
-    let blueish = Color(red: 0.33, green: 0.39, blue: 0.94)
+    private let palette: Palette = Palette()
     
     var body: some View {
         VStack(spacing: 6) {
             HStack {
                 Image(systemName: "paperplane.circle.fill")
-                    .foregroundColor(blueish)
+                    .foregroundColor(palette.blueish)
                 Text(vm.weather.city)
                     .font(.title2)
                     .bold()
